@@ -32,5 +32,10 @@ public class BuyStepdefs {
     public void total_should_be(double total) {
         assertEquals(total, order.getTotal());
     }
+
+    @Then("Remaining stock of {string} : {double}")
+    public void remaining_stock(String name, double stock) {
+        assertEquals(stock, order.getStock(name));
+    }
 }
 
